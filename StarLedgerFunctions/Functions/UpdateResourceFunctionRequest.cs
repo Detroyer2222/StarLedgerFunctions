@@ -16,7 +16,7 @@ public class UpdateResourceFunctionRequest
     }
 
     [Function("UpdateResourceFunctionRequest")]
-    public async Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest? req = null)
+    public async Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest? req = null)
     {
         _logger.LogInformation("HTTP Update Resource was triggered");
         
