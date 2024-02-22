@@ -17,7 +17,7 @@ public class UpdateResourceFunction
     //* * * * * Every 1 minute
     //0 2 * * * Every day at 2am UTC
     [Function(nameof(UpdateResourceFunction))]
-    public async Task Run([TimerTrigger("0 2 * * *")] TimerInfo myTimer)
+    public async Task Run([TimerTrigger("0 0 2 ? * * *")] TimerInfo myTimer)
     {
         _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
